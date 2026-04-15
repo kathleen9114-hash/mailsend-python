@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>메일 보내기</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>📧 메일 보내기</h1>
+
+    <form method="POST">
+        <input type="email" name="email" placeholder="받는 사람 이메일" required>
+
+        <input type="text" name="subject" placeholder="제목" required>
+
+        <textarea name="message" placeholder="내용을 입력하세요..." required></textarea>
+
+        <button type="submit">보내기</button>
+    </form>
+
+    {% if message %}
+        <p class="result">{{ message }}</p>
+    {% endif %}
+</div>
+
+</body>
+</html>
